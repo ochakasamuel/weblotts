@@ -1,2 +1,13 @@
+body {
+  position: relative; }
+
+.navbar-brand {
+  font-family: 'Satisfy', cursive; }
+
+/*the sects includes styles for the sections that cut across all of them*/
+.sects {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  color: brown; }
 
 /*# sourceMappingURL=style.css.map */
