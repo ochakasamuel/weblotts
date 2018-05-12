@@ -5,3 +5,8 @@ body {
 /* line 5, ../sass/style.scss */
 .navbar-brand {
   font-family: 'Satisfy', cursive; }
+
+/* line 8, ../sass/style.scss */
+.sects {
+  padding-top: 70px;
+  padding-bottom: 70px; }
