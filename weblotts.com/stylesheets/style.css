@@ -6,7 +6,9 @@ body {
 .navbar-brand {
   font-family: 'Satisfy', cursive; }
 
-/* line 8, ../sass/style.scss */
+/*the sects includes styles for the sections that cut across all of them*/
+/* line 9, ../sass/style.scss */
 .sects {
   padding-top: 70px;
-  padding-bottom: 70px; }
+  padding-bottom: 70px;
+  color: red; }
