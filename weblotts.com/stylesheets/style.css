@@ -7,6 +7,14 @@ body {
   font-family: 'Satisfy', cursive;
 }
 
+<<<<<<< HEAD
+/*the sects includes styles for the sections that cut across all of them*/
+/* line 9, ../sass/style.scss */
+.sects {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  color: red; }
+=======
 <style>
 .btn{
 border-radius: 0;
@@ -19,3 +27,4 @@ box-shadow: 2px 2px 2px rgba(0, 0, 0, .6);
 cursor: pointer;
 } 
 </style>
+>>>>>>> 4c6e9cf3e18623e3d2bc34734acf071c3b4bde40
