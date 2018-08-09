@@ -1,0 +1,73 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/bootstrap/css/bootstrap.min.css' %}"/>
+    <script src="{% static 'blog/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'blog/bootstrap/js/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <!-- Just an image -->
+          <a class="navbar-brand" href="{% url 'index' %}">
+            <img src="{% static 'blog/images/logo.jpg' %}" class="rounded-circle" width="70" height="70" alt="GFH">
+          </a>
+        <!--toggle bars-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'index' %}">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'page:post_by_category' category_slug='who-we-are' %}">WHO WE ARE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'page:post_by_category' category_slug='what-we-do' %}" >WHAT WE DO</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="{% url 'page:post_by_category' category_slug='where-we-work' %}"> WHERE WE WORK </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact-us' %}">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'blog:post_list' %}">BLOG</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<body>
+{% block body %}
+{% endblock %}
+<footer class="mt-4 bg-dark" style="color: white;">
+        <div class="container py-3">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Goshen's Fountain</h5></div>
+                <div class="col-md-3"></div>
+                <div class="col-md-3"></div>
+                <div class="col-md-3"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">Devoted to complete <span class="small"><br>We ensure that  your website is fully functional according to your specifications</span></div>
+                <div class="col-md-3"></div>
+                <div class="col-md-3 text-right small align-self-end">©2018 weblotts.com</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
